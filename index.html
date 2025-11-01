@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ვაკანსია • Game Lounge</title>
+  <link href="https://cdn.web-fonts.ge/fonts/bpg-banner-extrasquare-caps/css/bpg-banner-extrasquare-caps.min.css" rel="stylesheet">
+  <style>
+    :root {
+      --yellow: #ffd400;
+      --black: #111111;
+      --white: #ffffff;
+      --muted: #666666;
+      --card: #fafafa;
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; font-family: 'BPG Banner ExtraSquare Caps', sans-serif; color: var(--black); background: var(--white); }
+    .wrap { max-width: 900px; margin: 0 auto; padding: 16px; }
+
+    header { position: sticky; top: 0; background: rgba(255, 255, 255, 0.95); border-bottom: 2px solid var(--yellow); z-index: 3; display: flex; justify-content: space-between; align-items: center; padding: 10px 16px; }
+    .brand { display: flex; align-items: center; gap: 10px; font-weight: 800; letter-spacing: 0.3px; }
+    .logo { width: 36px; height: 36px; border-radius: 8px; background: var(--black); display: grid; place-items: center; color: var(--yellow); font-weight: 900; }
+    .actions { display: flex; align-items: center; gap: 8px; }
+    .cta-small { text-decoration: none; background: var(--yellow); color: var(--black); padding: 10px 14px; border-radius: 10px; font-weight: 700; border: 2px solid var(--black); box-shadow: 0 2px 0 var(--black); }
+    .cta-small:active, .btn:active { transform: translateY(1px); box-shadow: 0 1px 0 var(--black); }
+
+    .btn { cursor: pointer; background: var(--white); color: var(--black); padding: 10px 14px; border-radius: 10px; font-weight: 700; border: 2px solid var(--black); box-shadow: 0 2px 0 var(--black); }
+
+    h1 { margin: 16px 0 8px; font-size: clamp(28px, 6vw, 42px); }
+    .subtitle { margin-top: 8px; font-size: clamp(16px, 3.5vw, 20px); color: var(--muted); }
+
+    .pill { display: inline-flex; align-items: center; gap: 8px; background: var(--card); border: 2px dashed var(--black); border-radius: 12px; padding: 10px 12px; font-weight: 600; }
+    .pill a { color: inherit; text-decoration: none; border-bottom: 2px solid var(--yellow); }
+
+    .grid { display: grid; grid-template-columns: 1fr; gap: 16px; margin-top: 16px; }
+    @media (min-width: 760px) { .grid { grid-template-columns: 1fr 1fr; } }
+
+    .card { background: var(--card); border: 2px solid var(--black); border-radius: 16px; padding: 16px; box-shadow: 6px 6px 0 var(--black); }
+    .card h2 { margin: 0 0 10px; font-size: 22px; }
+    .card h3 { margin: 16px 0 8px; font-size: 18px; }
+
+    .highlight { background: var(--yellow); padding: 2px 6px; border-radius: 4px; font-weight: bold; }
+
+    .list { margin: 10px 0 0 0; padding-left: 18px; }
+    .list li { margin-bottom: 6px; }
+
+    .table { width: 100%; border-collapse: collapse; margin-top: 10px; }
+    .table th, .table td { border: 2px solid var(--black); padding: 10px; text-align: left; }
+    .table th { background: var(--yellow); }
+
+    .cta { position: sticky; bottom: 0; background: rgba(255, 212, 0, 0.98); border-top: 2px solid var(--black); padding: 10px 12px; display: flex; gap: 10px; justify-content: center; z-index: 3; flex-wrap: wrap; }
+    .cta a, .cta button { text-decoration: none; background: var(--black); color: var(--yellow); padding: 12px 16px; border-radius: 12px; font-weight: 800; display: inline-flex; align-items: center; gap: 8px; border: 2px solid var(--black); box-shadow: 0 2px 0 #000; cursor: pointer; }
+    .cta a.secondary { background: var(--white); color: var(--black); }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="brand">
+      <div class="logo">GL</div>
+      <div>Game Lounge</div>
+    </div>
+    <div class="actions">
+      <button id="shareBtn" class="btn">↗︎ გააზიარე მეგობართან</button>
+      <a class="cta-small" href="tel:+995577900006">📞 577 900006</a>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <div class="pill">🟡 <strong>ვაკანსია</strong> — ვეძებთ გუნდის ახალ წევრებს.</div>
+    <h1>კომპიუტერული კლუბი Game Lounge</h1>
+    <p class="subtitle">აცხადებს ვაკანსიას <strong>მომსახურე ოპერატორის</strong> და <strong>სალარო ოპერატორის (რესეფშენი)</strong> პოზიციებზე.</p>
+    <p>📍 მისამართი: ქ. თბილისი, სიმონ ჩიქოვანის 4 — <a href="https://maps.app.goo.gl/9pNT1VsoZM4pB4iS7" target="_blank" rel="noopener">ნახე მდებარეობა</a></p>
+
+    <section class="grid">
+      <article class="card">
+        <h2>მომსახურე ოპერატორი</h2>
+        <h3>ცვლები და ანაზღაურება</h3>
+        <table class="table">
+          <tr><th>ცვლა</th><th>დრო</th><th>ანაზღაურება</th></tr>
+          <tr><td>I</td><td>11:00 – 19:00</td><td><span class="highlight">60 ლარი</span> <small>(1 200 ლარიდან თვეში)</small></td></tr>
+          <tr><td>II</td><td>19:00 – 03:00</td><td><span class="highlight">60 ლარი + 5 ლარი ტრანსპორტირება</span> <small>(1 200 ლარიდან თვეში + 100 ლარი ტრანსპორტირების)</small></td></tr>
+          <tr><td>III</td><td>03:00 – 11:00</td><td><span class="highlight">75 ლარი + 5 ლარი ტრანსპორტირება</span> <small>(1 500 ლარიდან თვეში + 100 ლარი ტრანსპორტირების)</small></td></tr>
+        </table>
+        <p><strong>საბონუსე სისტემა</strong> მოქმედებს სამივე ცვლაზე.</p>
+        <h3>მოვალეობები</h3>
+        <ul class="list">
+          <li>მომხმარებლის დახვედრა;</li>
+          <li>თამაშების გაშვება;</li>
+          <li>მომსახურეობის სივრცეზე კონტროლი;</li>
+          <li>დარბაზში სისუფთავის/ჰიგიენური ნორმების დაცვა.</li>
+        </ul>
+      </article>
+
+      <article class="card">
+        <h2>სალარო ოპერატორი (რესეფშენი)</h2>
+        <p><strong>სამუშაო დრო:</strong> 18:00 – 02:00 <span class="muted">(დღეგამოშვებით)</span></p>
+        <p><strong>ანაზღაურება:</strong> <span class="highlight">60 ლარი + 5 ლარი ტრანსპორტირება</span> <small>(975 ლარიდან თვეში)</small></p>
+        <h3>მოვალეობები</h3>
+        <ul class="list">
+          <li>მომხმარებლის დახვედრა;</li>
+          <li>ზარების მიღება;</li>
+          <li>ჯავშნების გაკეთება;</li>
+          <li>მომხმარებლის დროის კონტროლი პროგრამულად;</li>
+          <li>სალაროს კონტროლი;</li>
+          <li>დარბაზში სისუფთავის/ჰიგიენური ნორმების დაცვა.</li>
+        </ul>
+      </article>
+    </section>
+
+    <section class="card" style="margin-top:16px">
+      <h2>დაგვიკავშირდი</h2>
+      <p>გასაუბრების ჩასანიშნად დაგვირეკე ნომერზე:</p>
+      <p><a class="cta-small" href="tel:+995577900006">📞 577 900006</a></p>
+    </section>
+  </main>
+
+  <div class="cta">
+    <a href="tel:+995577900006">📞 დარეკე ახლა</a>
+    <a class="secondary" href="https://maps.app.goo.gl/9pNT1VsoZM4pB4iS7" target="_blank">📍 ნახე მდებარეობა</a>
+    <button id="shareBtnBottom">↗︎ გააზიარე მეგობართან</button>
+  </div>
+</body>
+</html>
